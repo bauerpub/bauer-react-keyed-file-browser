@@ -1,5 +1,5 @@
 {
-  "name": "react-keyed-file-browser",
+  "name": "@bauerpub/bauer-react-keyed-file-browser",
   "version": "1.4.3",
   "description": "Folder based file browser given a flat keyed list of objects, powered by React.",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uptick/react-keyed-file-browser.git"
+    "url": "git+https://github.com/bauerpub/bauer-react-keyed-file-browser"
   },
   "keywords": [
     "react",
