@@ -7,12 +7,14 @@ import { NativeTypes } from 'react-dnd-html5-backend'
 import BaseFile, { BaseFileConnectors } from './../base-file.js'
 import { fileSize } from './utils.js'
 
+
 class RawTableFile extends BaseFile {
   render() {
     const {
       isDragging, isDeleting, isRenaming, isOver, isSelected,
       action, url, browserProps, connectDragPreview,
       depth, size, modified,
+      depth, last_modified, createdAt,
     } = this.props
 
     const icon = browserProps.icons[this.getFileType()] || browserProps.icons.File
@@ -90,8 +92,10 @@ class RawTableFile extends BaseFile {
           </div>
         </td>
         <td className="size">{fileSize(size)}</td>
+        <td className="created-at">{typeof createdAt === 'undefined' ? '-' : Moment(createdAt).calendar()}</td>
         <td className="modified">
           {typeof modified === 'undefined' ? '-' : Moment(modified, 'x').fromNow()}
+          {typeof last_modified === 'undefined' ? '-' : Moment(last_modified).fromNow()}
         </td>
       </tr>
     )
