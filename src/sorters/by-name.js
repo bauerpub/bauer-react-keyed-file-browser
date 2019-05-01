@@ -38,7 +38,6 @@ function naturalSort(allFiles) {
   }
 
   let sortedFiles = []
-  sortedFiles = sortedFiles.concat(folders)
   sortedFiles = sortedFiles.concat(folders).reverse()
   sortedFiles = sortedFiles.concat(files)
   return sortedFiles
