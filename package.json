@@ -7,7 +7,7 @@
     "publish-demo": "git branch -D gh-pages; git push origin --delete gh-pages; git checkout -b gh-pages; cd demo-site; yarn; npm run build; cd ..; git add .; git add -f demo-site/dist; git add -f demo-site/node_modules/uptick-demo-site/dist; git commit -m \"Demo site build\"; git push origin gh-pages; git checkout master; git push origin `git subtree split --prefix demo-site gh-pages`:gh-pages --force;",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "./node_modules/webpack/bin/webpack.js",
-    "build-css": "./node_modules/node-sass/bin/node-sass src/browser.sass dist/react-keyed-file-browser.css",
+    "build-css": "./node_modules/node-sass/bin/node-sass src/browser.sass dist/@bauerpub/bauer-react-keyed-file-browser",
     "build": "npm run build-js; npm run build-css",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 9001 -c .storybook"
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/uptick/react-keyed-file-browser/issues"
   },
-  "homepage": "https://github.com/uptick/react-keyed-file-browser#readme",
+  "homepage": "https://github.com/bauerpub/bauer-react-keyed-file-browser#readme",
   "dependencies": {
     "classnames": "^2.2.6",
     "moment": "^2.24.0",
