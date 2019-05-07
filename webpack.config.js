@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: '@bauerpub/bauer-react-keyed-file-browser.js',
-    library: 'bauer-react-keyed-file-browser',
+    library: '@bauerpub/bauer-react-keyed-file-browser',
     libraryTarget: 'umd',
   },
   module: {
